@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "name": "Example Building",
+    "code": "EX01",
+    "type": "building",
+    "zone": "A",
+    "floors": 3,
+    "open": "08:00",
+    "close": "17:00",
+    "facilities": ["Restroom", "Elevator"],
+    "image": "images/ex01.jpg",
+    "description": "Short real description."
+  }
+]

@@ -1,0 +1,69 @@
+:root {
+  --color-primary: #1d4ed8;
+  --color-primary-dark: #1e3a8a;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-muted: #475569;       /* contrast ผ่าน AA บนพื้นขาว */
+  --color-border: #e2e8f0;
+  --color-open: #166534;
+  --color-open-bg: #dcfce7;
+  --color-soon: #92400e;
+  --color-soon-bg: #fef3c7;
+  --color-closed: #991b1b;
+  --color-closed-bg: #fee2e2;
+
+  --font-base: "Sarabun", "Noto Sans Thai", system-ui, sans-serif;
+  --radius: 12px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --shadow: 0 2px 8px rgb(15 23 42 / 0.08);
+}
+
+[data-theme="dark"] {
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-text: #f1f5f9;
+  --color-muted: #cbd5e1;
+  --color-border: #334155;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--color-primary); }
+h1, h2, h3 { line-height: 1.25; margin: 0 0 var(--space-3); }
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: var(--space-2); top: -100px;
+  background: var(--color-primary); color: #fff;
+  padding: var(--space-2) var(--space-3); z-index: 100;
+}
+.skip-link:focus { top: var(--space-2); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
