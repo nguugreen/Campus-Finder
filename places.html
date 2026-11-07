@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ค้นหาและกรองอาคารเรียน ห้องเรียน สำนักงาน และจุดบริการทั้งหมดในมหาวิทยาลัย">
+  <title>ค้นหาสถานที่ทั้งหมด | Campus Finder</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหาหลัก</a>
+
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Campus Finder หน้าแรก">
+        <span class="brand-icon" aria-hidden="true">📍</span>
+        <span class="brand-text">Campus Finder</span>
+      </a>
+
+      <nav class="main-nav" aria-label="เมนูหลัก">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+          <li><a href="places.html" class="nav-link active" aria-current="page">สถานที่ทั้งหมด</a></li>
+          <li><a href="favorites.html" class="nav-link">รายการโปรด</a></li>
+          <li><a href="suggest.html" class="nav-link">แจ้ง/เสนอสถานที่</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+  <main id="main-content" class="container main-content">
+    <header class="page-header">
+      <h1>ค้นหาสถานที่ในมหาวิทยาลัย</h1>
+      <p class="page-subtitle">
+        พิมพ์ชื่ออาคาร รหัสอาคาร หรือรหัสห้องเรียน (เช่น SC-201) พร้อมเลือกกรองตามหมวดหมู่และโซน
+      </p>
+    </header>
+
+   
+    <section class="filter-section" aria-labelledby="filter-heading">
+      <h2 id="filter-heading" class="visually-hidden">ตัวค้นหาและตัวกรองสถานที่</h2>
+
+      <form id="search-filter-form" class="filter-form" role="search" novalidate>
+       
+        <div class="form-group search-group">
+          <label for="search-input" class="form-label">ค้นหาชื่อหรือรหัสห้อง/อาคาร</label>
+          <input
+            type="search"
+            id="search-input"
+            name="keyword"
+            class="form-control"
+            placeholder="เช่น อาคารวิทยาศาสตร์, SC-201, ATM, ห้องพยาบาล..."
+            autocomplete="off"
+          >
+        </div>
+
+        
+        <div class="form-group">
+          <label for="type-select" class="form-label">ประเภทสถานที่</label>
+          <select id="type-select" name="type" class="form-control">
+            <option value="all">ทุกประเภท</option>
+          </select>
+        </div>
+
+        
+        <div class="form-group">
+          <label for="zone-select" class="form-label">โซนพื้นที่</label>
+          <select id="zone-select" name="zone" class="form-control">
+            <option value="all">ทุกโซน</option>
+          </select>
+        </div>
+
+        
+        <div class="form-group filter-actions">
+          <button type="reset" id="reset-filter-btn" class="btn btn-secondary">
+            ล้างตัวกรอง
+          </button>
+        </div>
+      </form>
+    </section>
+
+    
+    <section class="results-section" aria-labelledby="results-heading">
+      <div class="results-toolbar">
+        <h2 id="results-heading" class="results-title">รายการสถานที่</h2>
+        
+        <p id="results-count" class="results-count" aria-live="polite">
+          กำลังโหลดข้อมูลสถานที่...
+        </p>
+      </div>
+
+      
+      <div id="error-message" class="status-box error-box" role="alert" hidden>
+        <p>ไม่สามารถโหลดข้อมูลสถานที่ได้ในขณะนี้ กรุณาลองรีเฟรชหน้าเว็บอีกครั้ง</p>
+      </div>
+
+      
+      <div id="empty-state" class="status-box empty-box" aria-live="polite" hidden>
+        <p>ไม่พบสถานที่ที่ตรงกับเงื่อนไขการค้นหา ลองเปลี่ยนคำค้นหาหรือกดปุ่ม "ล้างตัวกรอง"</p>
+      </div>
+
+      
+      <div id="places-grid" class="places-grid"></div>
+    </section>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Campus Finder — โครงการ Smart Campus (กลุ่มที่ 1) รายวิชา SC17332</p>
+    </div>
+  </footer>
+
+  

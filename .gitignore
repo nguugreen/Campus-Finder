@@ -1,0 +1,57 @@
+# ==========================================
+# 1. OS Generated Files (ไฟล์ขยะจากระบบปฏิบัติการ)
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ==========================================
+# 2. Editor & IDE Directories (ตั้งค่าส่วนตัวในเครื่อง)
+# ==========================================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-workspace
+*.sublime-project
+
+# ==========================================
+# 3. Node / Local Dev Tools (เผื่อบางคนลง 패키지ช่วยเทสต์)
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# ==========================================
+# 4. Environment & Temp Files (ไฟล์ชั่วคราว/แบ็กอัป)
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+.cache/
+AGENTS.md
+AI_LOG.md
