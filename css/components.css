@@ -1,0 +1,52 @@
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px;                 /* ขนาดปุ่มที่กดได้สะดวก */
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid transparent; border-radius: var(--radius);
+  font: inherit; cursor: pointer;
+}
+.btn-primary { background: var(--color-primary); color: #fff; }
+.btn-primary:hover { background: var(--color-primary-dark); }
+.btn-ghost { background: transparent; border-color: var(--color-border); color: var(--color-text); }
+
+.search-form { display: flex; gap: var(--space-2); }
+.search-form input,
+.form-field input, .form-field select, .form-field textarea {
+  flex: 1; min-height: 44px; width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border); border-radius: var(--radius);
+  font: inherit; background: var(--color-surface); color: var(--color-text);
+}
+
+.chip-list { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; padding: 0; margin: 0; }
+.chip {
+  display: inline-block; padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border); border-radius: 999px;
+  text-decoration: none; background: var(--color-surface);
+}
+
+.card {
+  display: flex; flex-direction: column; height: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border); border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow: hidden;
+}
+.card-img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
+.card-body { padding: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2); flex: 1; }
+.card-title { font-size: 1.125rem; margin: 0; }
+.card-meta { color: var(--color-muted); font-size: 0.875rem; margin: 0; }
+.card-actions { display: flex; gap: var(--space-2); margin-top: auto; }
+
+.badge {
+  display: inline-block; width: fit-content;
+  padding: 2px var(--space-2); border-radius: 999px;
+  font-size: 0.8125rem; font-weight: 700;
+}
+.badge--open { color: var(--color-open); background: var(--color-open-bg); }
+.badge--closing-soon { color: var(--color-soon); background: var(--color-soon-bg); }
+.badge--closed { color: var(--color-closed); background: var(--color-closed-bg); }
+
+.fav-btn[aria-pressed="true"] { background: var(--color-soon-bg); border-color: var(--color-soon); }
+
+.status-message { color: var(--color-muted); }
+.status-message--error { color: var(--color-closed); }
